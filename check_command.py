@@ -60,8 +60,7 @@ def check_for_renew() -> bool:
         chat_id = str(msg.get("chat", {}).get("id", ""))
 
         # 본인 chat에서 온 renew 명령만 처리
-        if chat_id == TG_CHAT and text in ("renew", "/renew"):
-            found_renew = True
+        if chat_id == TG_CHAT and text in ("renew", "/renew", "다시", "리뉴", "고고", "ㄱㄱ"):            found_renew = True
             print(f"[감지] renew 명령어 발견 (update_id={update_id})")
 
     # offset 저장 (다음에 같은 메시지 재처리 방지)
