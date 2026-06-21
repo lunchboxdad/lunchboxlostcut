@@ -4,7 +4,8 @@ on:
   schedule:
     # 5분마다 실행 (한국 장 시간 + 아침·저녁 커버)
     - cron: '*/5 * * * *'
-
+  workflow_dispatch:
+  
 permissions:
   contents: write
 
